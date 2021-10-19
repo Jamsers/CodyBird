@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game Over/GameOver.gd" type="Script" id=1]
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource( 1 )
+high_score_label = NodePath("HighScore")
+current_score_label = NodePath("CurrentScore")
+
+[node name="Main Menu" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -132.372
+margin_top = -207.089
+margin_right = -49.3716
+margin_bottom = -187.089
+rect_scale = Vector2( 3, 3 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScoreTitle" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -140.945
+margin_top = 46.4364
+margin_right = -57.9452
+margin_bottom = 66.4364
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "High Score"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScore" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -77.0176
+margin_top = 96.2171
+margin_right = -37.0176
+margin_bottom = 110.217
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentScoreTitle" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -176.162
+margin_top = 195.998
+margin_right = -66.1622
+margin_bottom = 216.998
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Current Score"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentScore" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -75.2357
+margin_top = 253.015
+margin_right = -35.2357
+margin_bottom = 267.015
+rect_scale = Vector2( 3, 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Main Menu" to="." method="_main_menu"]
